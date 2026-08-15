@@ -70,7 +70,7 @@ def extract_query_embedding(pil_image):
     img_array = img_to_array(img_resized)
     preprocessed_img = preprocess_input(img_array)
     expanded_img = np.expand_dims(preprocessed_img, axis=0)
-    
+
     # Extract feature embedding
     embedding = backbone.predict(expanded_img, verbose=0)
     return embedding
@@ -147,9 +147,17 @@ if query_image is not None:
             
             for col, (uri, distance) in zip(cols, batch):
                 with col:
-                    if os.path.exists(uri):
-                        img = Image.open(uri)
+                    # Dynamically convert Kaggle absolute path to relative local path
+                    if "Jewellery_Data" in uri:
+                        relative_subpath = uri.split("Jewellery_Data")[-1].lstrip("/\\")
+                        local_path = os.path.join(DATA_DIR, "Jewellery_Data", relative_subpath)
+                    else:
+                        local_path = uri
+
+                    # Render image if local path exists
+                    if os.path.exists(local_path):
+                        img = Image.open(local_path)
                         st.image(img, use_container_width=True)
                         st.caption(f"Distance: **{distance:.3f}**")
                     else:
-                        st.error("Image file path not found.")
+                        st.error(f"Image not found at:\n`{local_path}`")
