@@ -7,7 +7,7 @@ from PIL import Image
 import chromadb
 
 import keras
-from tensorflow.keras.applications import MobileNetV2, preprocess_input
+from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.utils import img_to_array
 
