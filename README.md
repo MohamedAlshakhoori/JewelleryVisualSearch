@@ -1,4 +1,4 @@
-# Jewelry Visual Search Engine
+# Jewellery Visual Search Engine
 
 An end-to-end computer vision and vector search pipeline designed to retrieve visually similar jewelry items from a catalog given a user-queried image or real-time camera capture.
 
