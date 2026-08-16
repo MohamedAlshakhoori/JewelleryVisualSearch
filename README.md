@@ -1,12 +1,12 @@
 # Jewellery Visual Search Engine
 
-An end-to-end computer vision and vector search pipeline designed to retrieve visually similar jewelry items from a catalog given a user-queried image or real-time camera capture.
+An end-to-end computer vision and vector search pipeline designed to retrieve visually similar jewellery items from a catalog given a user-queried image or real-time camera capture.
 
 ---
 
 ## Project Overview
 
-Finding specific jewelry designs through text queries can be difficult due to complex patterns, settings, and visual aesthetics. This application solves this by projecting product photos into a high-dimensional vector space where visual similarity can be computed using distance metrics.
+Finding specific jewellery designs through text queries can be difficult due to complex patterns, settings, and visual aesthetics. This application solves this by projecting product photos into a high-dimensional vector space where visual similarity can be computed using distance metrics.
 
 
 The system consists of two main stages:
