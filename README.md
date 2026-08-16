@@ -1,5 +1,3 @@
-# JewelleryVisualSearch
-
 # Jewelry Visual Search Engine
 
 An end-to-end computer vision and vector search pipeline designed to retrieve visually similar jewelry items from a catalog given a user-queried image or real-time camera capture.
@@ -29,9 +27,9 @@ The system consists of two main stages:
 
 ---
 
-## Links
+## 🔗 Links
 
-
+* **Live Web App:** [Try the App on Streamlit](https://jewelleryvisualsearch.streamlit.app/)
 
 ---
 
@@ -44,9 +42,9 @@ JewelleryVisualSearch/
 │   └── Jewellery_Data/                    # Catalog image dataset organized by category
 │       ├── necklace/
 │       └── ring/
-├── app.py                                 # Streamlit web application
 ├── notebook/
 │   └── jewellery-visual-search.ipynb/     # Offline feature extraction & indexing pipeline script
 ├── requirements.txt                       # Project dependencies
+├── app.py                                 # Streamlit web application
 ├── .gitignore
 └── README.md
